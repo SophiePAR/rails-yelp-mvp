@@ -1,10 +1,15 @@
-<h1> My Restaurants </h1>
-<h2>
-<ul>
-  <% @restaurants.each do |restaurant|%>
-<li> <%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-    <% end %>
-</ul>
-</h2>
-
-<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary m-5"%>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1 class="text-center"> My Restaurants </h1>
+      <ul class="list-unstyled">
+        <% @restaurants.each do |restaurant|%>
+      <li class="text-center"> <%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+          <% end %>
+      </ul>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary justify-content-center"%>
+      </div>
+    </div>
+  </div>
+</div>
